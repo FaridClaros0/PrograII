@@ -58,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                 opt =findViewById(R.id.optRaiz);
                 if (opt.isChecked()){
-                    respuesta = Math.sqrt(num1);
-                    respuesta = Math.sqrt(num2);
+                    respuesta = num1 = Math.sqrt(num2);
                 }
 
                 opt =findViewById(R.id.optFactorial);
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                 opt =findViewById(R.id.optMayor);
                 if (opt.isChecked()) { if(num1>num2) {respuesta = num1;
-                if (num2<num1);
+                if (num2>num1);
                     respuesta= num2;}
 
                 }
