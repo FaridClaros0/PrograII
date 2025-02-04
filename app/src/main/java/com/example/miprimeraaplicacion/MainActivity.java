@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 double num1 = Double.parseDouble(tempVal.getText().toString());
                 tempVal = findViewById(R.id.txtNum2);
                 double num2 = Double.parseDouble(tempVal.getText().toString());
+                double factorial =1;
 
                 double respuesta = 0.0;
 
@@ -63,7 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
                 opt =findViewById(R.id.optFactorial);
                 if (opt.isChecked()) {
-                    respuesta = num1;
+                    while (num1!=0){
+                        factorial = factorial * num1;
+                        num1 = num1 - 1;
+                    }
+                    respuesta= factorial;
                 }
 
                 opt =findViewById(R.id.optModulo);
