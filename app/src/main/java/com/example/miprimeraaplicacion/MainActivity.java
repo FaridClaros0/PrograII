@@ -62,6 +62,24 @@ public class MainActivity extends AppCompatActivity {
                     respuesta = Math.sqrt(num2);
                 }
 
+                opt =findViewById(R.id.optFactorial);
+                if (opt.isChecked()) {
+                    respuesta = num1;
+                }
+
+                opt =findViewById(R.id.optModulo);
+                if (opt.isChecked()) {
+
+                    respuesta = num1 % num2;
+                }
+
+                opt =findViewById(R.id.optMayor);
+                if (opt.isChecked()) { if(num1>num2) {respuesta = num1;
+                if (num2<num1);
+                    respuesta= num2;}
+
+                }
+
                 tempVal = findViewById(R.id.lblRespuesta);
                 tempVal.setText("Respuesta: "+ respuesta);
             }
