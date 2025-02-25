@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">miPrimeraAplicacion</string>
 
+    <string-array name="Areas">
+        <item>Pie cuadrado</item>
+        <item>Vara cuadrada</item>
+        <item>Yarda cuadrada</item>
+        <item>Metro cuadrado</item>
+        <item>Tarea</item>
+        <item>Manzana</item>
+        <item>Hectarea</item>
+    </string-array>
 
 
 </resources>
