@@ -42,24 +42,25 @@ public class MainActivity extends AppCompatActivity {
                 switch (spn.getSelectedItemPosition()){
                     case 0:
                         respuesta = num1 + num2;
-                        msg = "La suma es:"+ respuesta;
+                        msg = "La suma es: "+ respuesta;
                         break;
                     case 1:
                         respuesta = num1 - num2;
-                        msg = "La resta es:"+ respuesta;
+                        msg = "La resta es: "+ respuesta;
                         break;
                     case 2:
                         respuesta = num1 * num2;
-                        msg = "La multiplicacion es:"+ respuesta;
+                        msg = "La multiplicacion es: "+ respuesta;
                         break;
                     case 3:
                         respuesta = num1 / num2;
-                        msg = "La division es:"+ respuesta;
+                        msg = "La division es: "+ respuesta;
                         break;
                 }
 
                 tempVal = findViewById(R.id.lblRespuesta);
                 tempVal.setText("Respuesta: "+ respuesta);
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
             }
         });
 
