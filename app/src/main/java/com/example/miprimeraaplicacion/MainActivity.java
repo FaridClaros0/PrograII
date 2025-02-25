@@ -7,6 +7,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +18,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     Button btn;
     TextView tempVal;
-    RadioGroup rgb;
-    RadioButton opt;
+    Spinner spn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,52 +37,25 @@ public class MainActivity extends AppCompatActivity {
 
                 double respuesta = 0.0;
 
-                opt = findViewById(R.id.optSuma);
-                if (opt.isChecked()) {
-                    respuesta = num1 + num2;
-                }
-                opt = findViewById(R.id.optResta);
-                if (opt.isChecked()) {
-                    respuesta = num1 - num2;
-                }
-                opt = findViewById(R.id.optMultiplicacion);
-                if (opt.isChecked()) {
-                    respuesta = num1 * num2;
-                }
-                opt = findViewById(R.id.optDivision);
-                if (opt.isChecked()) {
-                    respuesta = num1 / num2;
-                }
-                opt = findViewById(R.id.optExponenciacion);
-                if (opt.isChecked()){
-                    respuesta = Math.pow(num1,num2);
-                }
-
-                opt =findViewById(R.id.optRaiz);
-                if (opt.isChecked()){
-                    respuesta = num1 = Math.sqrt(num2);
-                }
-
-                opt =findViewById(R.id.optFactorial);
-                if (opt.isChecked()) {
-                    while (num1!=0){
-                        factorial = factorial * num1;
-                        num1 = num1 - 1;
-                    }
-                    respuesta= factorial;
-                }
-
-                opt =findViewById(R.id.optModulo);
-                if (opt.isChecked()) {
-
-                    respuesta = num1 % num2;
-                }
-
-                opt =findViewById(R.id.optMayor);
-                if (opt.isChecked()) { if(num1>num2) {respuesta = num1;
-                if (num2>num1);
-                    respuesta= num2;}
-
+                String msg ="";
+                spn = findViewById(R.id.spnOpciones);
+                switch (spn.getSelectedItemPosition()){
+                    case 0:
+                        respuesta = num1 + num2;
+                        msg = "La suma es:"+ respuesta;
+                        break;
+                    case 1:
+                        respuesta = num1 - num2;
+                        msg = "La resta es:"+ respuesta;
+                        break;
+                    case 2:
+                        respuesta = num1 * num2;
+                        msg = "La multiplicacion es:"+ respuesta;
+                        break;
+                    case 3:
+                        respuesta = num1 / num2;
+                        msg = "La division es:"+ respuesta;
+                        break;
                 }
 
                 tempVal = findViewById(R.id.lblRespuesta);
