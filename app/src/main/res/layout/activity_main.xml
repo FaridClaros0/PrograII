@@ -8,14 +8,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/lblSensorGps"
-        android:text="Sensor de gps"
+        android:id="@+id/lblReproductorMusica"
+        android:text="Reproductor de Música"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-
-
 
 
 </RelativeLayout>
